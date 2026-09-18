@@ -1,4 +1,4 @@
-FROM amazoncorretto:25
-COPY ./target/semCW-0.1.0.1-jar-with-dependencies.jar /tmp
+FROM eclipse-temurin:25
+COPY ./target/classes/com /tmp/com
 WORKDIR /tmp
-ENTRYPOINT ["java", "-jar", "semCW-0.1.0.1-jar-with-dependencies.jar"]
+ENTRYPOINT ["java", "com.napier.sem.App"]
